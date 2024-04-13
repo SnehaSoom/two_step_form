@@ -1,7 +1,7 @@
 /* styles.css */
 .form {
   width: 400px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 20px 50px 30px 30px;
   border-radius: 10px;
   background-color: #f8f9fa;
@@ -46,9 +46,15 @@ input[type="tel"] {
   font-size: 14px;
 }
 
+.input-box{
+  display: flex;
+  height: 30px;
+  align-items: center;
+}
+
 .next-button {
   padding: 12px 20px;
-  background-color: #007bff;
+  background-color: #860a0ae3;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -58,5 +64,44 @@ input[type="tel"] {
 }
 
 .next-button:hover {
-  background-color: #0056b3;
+  background-color: #e4716d80;
+  color: #860a0ae3;
+  border: 1px solid #860a0ae3;
+}
+
+
+.add-button {
+  padding: 12px 20px;
+  background-color: #d1c410e3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #dfd7636c;
+  color: #d3c507;
+  border: 1px solid #d3c507;
+}
+
+.remove-button {
+  padding: 12px 20px;
+  background-color: #d11010d2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+  background-color: #ec6d6d4f;
+  color: #d11010d2;
+  border: 1px solid #d11010d2;
 }
