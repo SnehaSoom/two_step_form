@@ -39,12 +39,12 @@ const App = () => {
         <UserInfoForm onNextStep={handleNextStep} />
       )}
       {step === 2 && (
-        <FamilyInfoForm 
-          onNextStep={handleNextStep} 
-          onPrevStep={handlePrevStep} 
-          onAddFamilyMember={handleAddFamilyMember} 
-          familyMembers={familyData} 
-          onRemoveFamilyMember={handleRemoveFamilyMember} 
+        <FamilyInfoForm
+          onNextStep={handleNextStep}
+          onPrevStep={handlePrevStep}
+          onAddFamilyMember={handleAddFamilyMember}
+          familyMembers={familyData}
+          onRemoveFamilyMember={handleRemoveFamilyMember}
         />
       )}
       {step === 3 && (
@@ -52,16 +52,20 @@ const App = () => {
           <h2>Summary</h2>
           <p>User Information:</p>
           <ul>
-            <li>First Name: {userData.firstName}</li>
-            {/* Display other user information */}
+            <li data-label="First Name :"> {userData.firstName}</li>
+            <li data-label="Last Name :"> {userData.lastName}</li>
+            <li data-label="Parent Names :"> {userData.parentNames}</li>
+            <li data-label="Phone Number :"> {userData.phoneNumber}</li>
+            <li data-label="Email :"> {userData.email}</li>
+            <li data-label="Address :"> {userData.address}</li>
           </ul>
           <p>Family Information:</p>
           <ul>
             {familyData.map((member, index) => (
-              <li key={index}>Family Member {index + 1}: {member.name}</li>
+              <li key={index} data-label={`Family Member ${index + 1}:`}>{member.name}</li>
             ))}
           </ul>
-          <p>Success message</p>
+          <p>!!! Successfully saved User Information.</p>
         </div>
       )}
     </div>
